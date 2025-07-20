@@ -1,0 +1,79 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("KiuroV2", "DarkTheme")
+
+-- Main
+local Main = Window:NewTab("Universal")
+local MainSection = Main:NewSection("Universal")
+
+
+MainSection:NewButton("Load Infinite Yield", "Just Click It Nigga", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("TpTool", "Click TO Teleport", function()
+        --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "TeleportTool"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+MainSection:NewButton("HitboxExpander", "Cant You fucking Read just click it nigga", function()
+        --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- leave a like pls
+
+
+_G.HeadSize = 50
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("White")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+MainSection:NewButton("Free Emote r15", "keybind to open is comma", function()
+        --keybind to open is comma
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+end)
+
+MainSection:NewButton("YBA", "NukeVsCity", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/Scripts2024/main/ybaredguiforpc"))()
+end)
+
+MainSection:NewButton("Ink Game", "TANA DAE", function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/284c7c5eb4a430a82162018c617e9aa0.lua"))()
+end)
+
+    MainSection:NewButton("KrystalDance", "BruhSolaggy", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
+end)
+
+MainSection:NewButton("Fe-invincible", "Press G to Invis", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+end)
+
+MainSection:NewButton("Ro-Ghoul", "AutoFarm & Others", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PorryDepTrai/exploit/main/DashBoostSolora.lua"))()
+end)
